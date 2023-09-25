@@ -81,14 +81,22 @@
 					
 				</li>
 				</g:if>
-			
+
 				<g:if test="${livroInstance?.titulo}">
 				<li class="fieldcontain">
 					<span id="titulo-label" class="property-label"><g:message code="livro.titulo.label" default="Titulo" /></span>
-					
+
 						<span class="property-value" aria-labelledby="titulo-label"><g:fieldValue bean="${livroInstance}" field="titulo"/></span>
-					
+
 				</li>
+				</g:if>
+				<g:if test="${livroInstance?.estoque}">
+					<li class="fieldcontain">
+						<span id="estoque-label" class="property-label"><g:message code="livro.estoque.label" default="Titulo" /></span>
+
+						<span class="property-value" aria-labelledby="estoque-label"><g:fieldValue bean="${livroInstance}" field="estoque"/></span>
+
+					</li>
 				</g:if>
 			
 			</ol>

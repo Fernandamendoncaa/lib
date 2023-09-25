@@ -36,5 +36,13 @@
 	<g:textField name="publicacao" required="" value="${livroInstance?.publicacao}"/>
 
 </div>
+<div class="fieldcontain ${hasErrors(bean: livroInstance, field: 'estoque', 'error')} required">
+	<label for="estoque">
+		<g:message code="livro.estoque.label" default="Estoque" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="estoque" required="" value="${livroInstance?.estoque}"/>
+
+</div>
 
 

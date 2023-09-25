@@ -7,6 +7,6 @@ class Livro {
     String editora
     String publicacao
     Long isbn
-
+    Integer estoque
 }
 

@@ -5,10 +5,5 @@ class LocacaoLivro {
     Cliente cliente
     Livro livro
     Date dataLocacao
-    Date dataDevolucao
-
-    static constraints = {
-
-
-    }
+    Date dataDevolucao;
 }

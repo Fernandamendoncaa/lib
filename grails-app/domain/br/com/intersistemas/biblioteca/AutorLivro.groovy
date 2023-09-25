@@ -5,9 +5,4 @@ class AutorLivro {
     Autor autor
     Livro livro
 
-    static constraints = {
-
-
-    }
-
 }

@@ -6,13 +6,47 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'cliente.label', default: 'Cliente')}" />
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
+		<style>
+
+		#grailsLogo {background-color: #666666}
+		h1 {
+			color: black;
+			background-color:white;
+			font-family: "calibri"
+
+		}
+		table {
+			border-top: 5px solid grey;
+
+		}
+		a:link, a:visited, a:hover {
+			color: black;
+		}
+		td, th{ color: black;
+			font-family: Calibri  }
+		.footer {
+			background: #666666;
+			color:white}
+
+
+		.footer a {
+			color: #666666;
+		}
+		.nav {
+			font-family: Calibri;}
+
+
+		</style>
+
+
+
 	</head>
 	<body>
 		<a href="#show-cliente" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="list" action="index"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
 			</ul>
 		</div>

@@ -6,7 +6,39 @@
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'autor.label', default: 'Autor')}" />
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
-	</head>
+		<style>
+
+		#grailsLogo {background-color: #666666}
+		h1 {
+			color: black;
+			background-color:white;
+			font-family: "calibri"
+
+		}
+		table {
+			border-top: 5px solid grey;
+
+		}
+		a:link, a:visited, a:hover {
+			 color: black;
+		 }
+		td, th{ color: black;
+			font-family: Calibri  }
+		.footer {
+			background: #666666;
+			color:white}
+
+
+		.footer a {
+			color: #666666;
+		}
+		.nav {
+		 font-family: Calibri;}
+
+
+		</style>
+
+		</head>
 	<body>
 		<a href="#list-autor" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 		<div class="nav" role="navigation">

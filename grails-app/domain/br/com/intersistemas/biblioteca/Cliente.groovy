@@ -12,4 +12,5 @@ class Cliente {
         email nullable: false
         endereco nullable: false
     }
+
 }

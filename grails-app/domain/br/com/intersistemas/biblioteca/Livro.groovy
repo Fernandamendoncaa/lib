@@ -8,5 +8,15 @@ class Livro {
     String publicacao
     Long isbn
     Integer estoque = 1
-}
 
+    static namedQueries = {
+        consultaPorTitulo { String titulo ->
+            like 'titulo', "%${titulo}%"
+        }
+
+        livrosComEstoque { ->
+            gt 'estoque', 0
+
+        }
+    }
+}

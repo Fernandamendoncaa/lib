@@ -37,6 +37,7 @@
 
 
 		</style>
+
 	</head>
 	<body>
 		<a href="#show-locacaoLivro" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -54,20 +55,21 @@
 			</g:if>
 			<ol class="property-list locacaoLivro">
 			
+				<g:if test="${locacaoLivroInstance?.livro}">
+				<li class="fieldcontain">
+					<span id="livro-label" class="property-label"><g:message code="locacaoLivro.livro.label" default="Livro" /></span>
+					
+						<span class="property-value" aria-labelledby="livro-label"><g:link controller="livro" action="show" id="${locacaoLivroInstance?.livro?.id}">${locacaoLivroInstance?.livro?.titulo}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${locacaoLivroInstance?.cliente}">
 				<li class="fieldcontain">
 					<span id="cliente-label" class="property-label"><g:message code="locacaoLivro.cliente.label" default="Cliente" /></span>
 					
 						<span class="property-value" aria-labelledby="cliente-label"><g:link controller="cliente" action="show" id="${locacaoLivroInstance?.cliente?.id}">${locacaoLivroInstance?.cliente?.nome}</g:link></span>
 					
-				</li>
-				</g:if>
-			
-				<g:if test="${locacaoLivroInstance?.dataDevolucao}">
-				<li class="fieldcontain">
-					<span id="dataDevolucao-label" class="property-label"><g:message code="locacaoLivro.dataDevolucao.label" default="Data Devolucao" /> </span>
-					
-						<span class="property-value" aria-labelledby="dataDevolucao-label"> <g:formatDate format="dd/MM/yyyy" date="${locacaoLivroInstance?.dataDevolucao}"/></span>
 				</li>
 				</g:if>
 			
@@ -80,11 +82,20 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${locacaoLivroInstance?.livro}">
+				<g:if test="${locacaoLivroInstance?.dataDevolucao}">
 				<li class="fieldcontain">
-					<span id="livro-label" class="property-label"><g:message code="locacaoLivro.livro.label" default="Livro" /></span>
+					<span id="dataDevolucao-label" class="property-label"><g:message code="locacaoLivro.dataDevolucao.label" default="Data Devolucao" /></span>
 					
-						<span class="property-value" aria-labelledby="livro-label"><g:link controller="livro" action="show" id="${locacaoLivroInstance?.livro?.id}">${locacaoLivroInstance?.livro?.titulo}</g:link></span>
+						<span class="property-value" aria-labelledby="dataDevolucao-label"><g:formatDate format="dd/MM/yyyy" date="${locacaoLivroInstance?.dataLocacao}"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${locacaoLivroInstance?.devolvido}">
+				<li class="fieldcontain">
+					<span id="devolvido-label" class="property-label"><g:message code="locacaoLivro.devolvido.label" default="Devolvido" /></span>
+					
+						<span class="property-value" aria-labelledby="devolvido-label"><g:formatBoolean boolean="${locacaoLivroInstance?.devolvido}" /></span>
 					
 				</li>
 				</g:if>
